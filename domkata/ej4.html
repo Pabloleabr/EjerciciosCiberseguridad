@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<input class="click" type="text"/>
+	<input class="focus" type="text"/>
+	<input class="value" type="text"/>
+    <button id="btnToClick">event info</button>
+</body>
+<script>
+    /* 1.1 Añade un botón a tu html con el id btnToClick y en tu javascript añade el 
+    evento click que ejecute un console log con la información del evento del click */
+    document.getElementById("btnToClick").addEventListener("click", (e)=>console.log(e))
+    /* 1.2 Añade un evento 'focus' que ejecute un console.log con el valor del input. */
+    document.querySelector(".focus").addEventListener("focus", ()=>console.log(document.querySelector(".value").value))
+    /* 1.3 Añade un evento 'input' que ejecute un console.log con el valor del input. */
+    const inp = document.querySelector(".click")
+    inp.addEventListener("input", ()=>console.log(inp.value))
+
+</script>
+</html>

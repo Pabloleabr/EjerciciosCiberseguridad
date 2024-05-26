@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div data-function="printHere"></div>
+  </body>
+  <script>
+    /* Utiliza el array para crear dinamicamente una lista ul > li de elementos en el div de html con el atributo data-function="printHere". */
+    const places = ["Gondor", "Mordor", "Rivendel", "La Comarca", "Nümenor"];
+    const lista = document.createElement("ul")
+    for (c of places){
+        const li = document.createElement("li")
+        li.innerText = c
+        console.log(c);
+        lista.appendChild(li)
+    }
+    document.querySelector("[data-function=printHere]").appendChild(lista)
+  </script>
+</html>
